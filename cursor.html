@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            cursor: none;
+            height: 500px;
+        }
+        .pp{
+            cursor: no-drop;
+            width: 500px;
+            height: 200px;
+            background-color: #ffffff;
+        }
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid aqua;
+            border-radius: 50%;
+            position: absolute;
+            visibility: hidden;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="pp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed ipsum rem quasi, repellendus exercitationem enim tenetur dolore voluptatem similique quisquam unde consectetur quod maiores eius. Est debitis harum ducimus?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos mollitia nostrum, sunt, eveniet maiores beatae odit nam sed est praesentium ut nemo minima, reprehenderit culpa cum necessitatibus ab impedit consequuntur.
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(window).mousemove(function (e) {
+                $(".cursor").css("visibility", "visible");
+                $(".cursor").css("top", `${e.pageY}px`);
+                $(".cursor").css("left", `${e.pageX}px`);
+            });
+            $(window).mouseout(function () {
+                $(".cursor").css("visibility", "hidden b");
+            });
+        });
+    </script>
+</body>
+
+</html>
